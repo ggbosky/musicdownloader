@@ -1,7 +1,7 @@
 # Pravidla pro Clauda v tomto repozitáři
 
 Uživatel používá `downloader.py` ke stahování hudby do MP3 do složky `E:\Hudba ai stahovani`
-(Windows). Skript je uložený v `C:\hudba\downloader.py`.
+(Windows). Skript je uložený v `E:\Hudba ai stahovani\downloader.py`.
 
 ## Hlavní pravidlo: seznam písniček → jeden příkaz
 
@@ -10,7 +10,7 @@ odrážky, čárky, zkopírovaný text, odkazy), odpověz **jediným příkazem 
 v bloku kódu, který stačí zkopírovat a zmáčknout Enter:
 
 ```powershell
-py C:\hudba\downloader.py "Interpret - Písnička" "Interpret 2 - Písnička 2" "https://www.youtube.com/watch?v=..."
+py "E:\Hudba ai stahovani\downloader.py" "Interpret - Písnička" "Interpret 2 - Písnička 2" "https://www.youtube.com/watch?v=..."
 ```
 
 Zásady:
@@ -19,6 +19,6 @@ Zásady:
 - Odkazy (YouTube, YouTube Music, SoundCloud, Bandcamp…) vlož beze změny.
 - Celé album bez odkazu: `"Interpret - Album full album"` (nebo jednotlivé skladby alba, pokud je uživatel chce zvlášť).
 - Z názvů odstraň znaky `"` a `` ` ``.
-- Při velmi dlouhém seznamu (víc než ~40 položek) místo toho vygeneruj obsah pro `C:\hudba\seznam.txt`
-  (jedna položka na řádek) a příkaz `py C:\hudba\downloader.py C:\hudba\seznam.txt`.
+- Při velmi dlouhém seznamu (víc než ~40 položek) místo toho vygeneruj obsah pro `E:\Hudba ai stahovani\seznam.txt`
+  (jedna položka na řádek) a příkaz `py "E:\Hudba ai stahovani\downloader.py" "E:\Hudba ai stahovani\seznam.txt"`.
 - Žádné zbytečné vysvětlování, stačí příkaz (případně jedna krátká věta, pokud něco nebylo jasné).

@@ -1,6 +1,6 @@
 # Ukázkový seznam – jedna písnička nebo odkaz na řádek.
 # Řádky začínající # se ignorují.
-# Spuštění:  py C:\hudba\downloader.py C:\hudba\seznam.txt
+# Spuštění:  py "E:\Hudba ai stahovani\downloader.py" "E:\Hudba ai stahovani\seznam.txt"
 
 Queen - Bohemian Rhapsody
 Daft Punk - Get Lucky

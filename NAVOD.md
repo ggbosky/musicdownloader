@@ -30,11 +30,11 @@ winget install -e --id Python.Python.3.13 ; winget install -e --id Gyan.FFmpeg ;
 py -m pip install -U "yt-dlp[default]"
 ```
 
-### Krok 3: Ulož skript do složky `C:\hudba`
+### Krok 3: Ulož skript do složky `E:\Hudba ai stahovani`
 
-1. Na disku **C:** vytvoř složku **`hudba`** (tedy `C:\hudba`).
+1. Složka **`E:\Hudba ai stahovani`** už existuje (je to zároveň složka, kam se ukládá hudba).
 2. Ulož do ní soubory **`downloader.py`** a **`stahni.bat`** z tohoto repozitáře
-   (na GitHubu: zelené tlačítko **Code → Download ZIP**, rozbal a oba soubory přetáhni do `C:\hudba`).
+   (na GitHubu: zelené tlačítko **Code → Download ZIP**, rozbal a oba soubory přetáhni do `E:\Hudba ai stahovani`).
 
    > Když kód kopíruješ ručně do Poznámkového bloku: *Soubor → Uložit jako* →
    > Typ: **Všechny soubory**, Kódování: **UTF-8**, název `downloader.py`.
@@ -42,7 +42,7 @@ py -m pip install -U "yt-dlp[default]"
 3. **První spuštění (test):** v PowerShellu napiš:
 
 ```powershell
-py C:\hudba\downloader.py "Queen - Bohemian Rhapsody"
+py "E:\Hudba ai stahovani\downloader.py" "Queen - Bohemian Rhapsody"
 ```
 
 Za chvíli najdeš MP3 ve složce `E:\Hudba ai stahovani`. 🎉
@@ -54,20 +54,20 @@ Za chvíli najdeš MP3 ve složce `E:\Hudba ai stahovani`. 🎉
 **A) Příkaz v PowerShellu** (nejrychlejší, právě takový příkaz ti vygeneruje Claude):
 
 ```powershell
-py C:\hudba\downloader.py "Queen - Bohemian Rhapsody" "Eminem - Lose Yourself" "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+py "E:\Hudba ai stahovani\downloader.py" "Queen - Bohemian Rhapsody" "Eminem - Lose Yourself" "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 ```
 
 - **Název písničky** → najde se na YouTube a stáhne se první výsledek.
 - **Odkaz na video** → stáhne se to video.
 - **Odkaz na playlist nebo album** → stáhne se celé, do vlastní podsložky, očíslované.
 
-**B) Dvojklik na `C:\hudba\stahni.bat`** → zeptá se tě. Napiš písničky (každou na nový řádek),
+**B) Dvojklik na `E:\Hudba ai stahovani\stahni.bat`** → zeptá se tě. Napiš písničky (každou na nový řádek),
 nakonec zmáčkni Enter na prázdném řádku.
 
 **C) Seznam v textovém souboru:** napiš do `seznam.txt` jednu písničku nebo odkaz na řádek a:
 
 ```powershell
-py C:\hudba\downloader.py C:\hudba\seznam.txt
+py "E:\Hudba ai stahovani\downloader.py" "E:\Hudba ai stahovani\seznam.txt"
 ```
 
 (nebo přetáhni `seznam.txt` myší na ikonu `stahni.bat`).
@@ -82,7 +82,7 @@ Už stažené písničky se znovu nestahují (pamatuje si je soubor `_uz_stazeno
 |---|---|
 | `py` nebo `ffmpeg` „není rozpoznán“ | Zavři a znovu otevři PowerShell. Když to nepomůže, restartuj PC. |
 | Přestalo to stahovat / chyby z YouTube | Aktualizuj stahovač: `py -m pip install -U "yt-dlp[default]"` (YouTube se často mění) |
-| „Sign in to confirm you're not a bot“ | Přihlas se na YouTube ve **Firefoxu**, otevři `C:\hudba\downloader.py` v Poznámkovém bloku a změň `COOKIES_Z_PROHLIZECE = None` na `COOKIES_Z_PROHLIZECE = "firefox"`. |
+| „Sign in to confirm you're not a bot“ | Přihlas se na YouTube ve **Firefoxu**, otevři `E:\Hudba ai stahovani\downloader.py` v Poznámkovém bloku a změň `COOKIES_Z_PROHLIZECE = None` na `COOKIES_Z_PROHLIZECE = "firefox"`. |
 | Stáhla se jiná verze písničky | Napiš přesnější název (např. přidej „official audio“) nebo použij přímo odkaz. |
 | Chci jinou cílovou složku | V `downloader.py` změň řádek `OUTPUT_DIR = r"E:\Hudba ai stahovani"`. |
 
@@ -102,7 +102,7 @@ zkopíruješ ho do PowerShellu a zmáčkneš Enter. Pravidlo je uložené v soub
 ```text
 Když ti pošlu seznam písniček, alb nebo odkazů na hudbu, odpověz JEDINÝM příkazem
 pro PowerShell ve formátu:
-py C:\hudba\downloader.py "Interpret - Písnička" "https://odkaz" ...
+py "E:\Hudba ai stahovani\downloader.py" "Interpret - Písnička" "https://odkaz" ...
 Každá položka v uvozovkách, vše na jednom řádku. Názvy oprav na "Interpret - Název".
 U celého alba použij "Interpret - Album full album", nebo odkaz na playlist, pokud ho mám.
 Uvozovky uvnitř názvů odstraň. Žádné další vysvětlování, jen příkaz v bloku kódu.
