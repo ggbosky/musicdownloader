@@ -10,5 +10,5 @@ do složky `E:\Hudba ai stahovani`.
 - `CLAUDE.md`: pravidlo pro Clauda (seznam písniček → hotový příkaz)
 
 ```powershell
-py "E:\Hudba ai stahovani\downloader.py" "Queen - Bohemian Rhapsody" "https://www.youtube.com/playlist?list=..."
+py "E:\Hudba ai stahovani\X\downloader.py" "Queen - Bohemian Rhapsody" "https://www.youtube.com/playlist?list=..."
 ```
