@@ -27,9 +27,11 @@ COOKIES_Z_PROHLIZECE = None             # jen když YouTube hlásí "nejsi robot
 
 try:
     import yt_dlp
-except ImportError:
-    print("CHYBA: Chybí knihovna yt-dlp.")
-    print('Nainstaluj ji příkazem:  py -m pip install -U "yt-dlp[default]"')
+except ImportError as e:
+    print("CHYBA: Nepodařilo se načíst knihovnu yt-dlp.")
+    print(f"Důvod: {e!r}")
+    print(f"Python: {sys.executable}")
+    print(f'Zkus:  & "{sys.executable}" -m pip install -U "yt-dlp[default]"')
     sys.exit(1)
 
 
