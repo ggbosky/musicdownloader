@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Stahovač hudby z YouTube (a dalších webů) do MP3.
 
